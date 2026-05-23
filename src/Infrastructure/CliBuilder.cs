@@ -162,6 +162,41 @@ public static class CliBuilder
 
         rootCommand.Add(stateCommand);
 
+        // Completion Command
+        var completionCommand = new Command("completion");
+        completionCommand.Description = "Generate shell completion scripts for PowerShell or Bash";
+
+        var shellArgument = new Argument<string>("shell")
+        {
+            Description = "Target shell (powershell or bash)"
+        };
+        completionCommand.Arguments.Add(shellArgument);
+
+        completionCommand.SetAction((ParseResult result) =>
+        {
+            var shell = result.GetValue(shellArgument)!;
+
+            if (!ShellCompletionGenerator.SupportedShells.Contains(shell.ToLowerInvariant()))
+            {
+                Console.Error.WriteLine($"Argument '{shell}' not recognized. Must be one of: {string.Join(", ", ShellCompletionGenerator.SupportedShells)}");
+                return 1;
+            }
+
+            try
+            {
+                var script = ShellCompletionGenerator.Generate(rootCommand, shell);
+                Console.Write(script);
+                return 0;
+            }
+            catch (ArgumentException ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+                return 1;
+            }
+        });
+
+        rootCommand.Add(completionCommand);
+
         return rootCommand;
     }
 
