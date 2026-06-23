@@ -115,11 +115,11 @@
 - **#472** (VLC test lint fix, @Vishxlll20) — Removed blank line causing ruff import-sort error. Merged.
 - **#471** (NuGet docs, @Vishxlll20) — Comprehensive NuGet docs + README entry. Merged. Closes #450.
 - **#476** (Flow Launcher docs, @vipul674) — Standard template, POSIX newlines. Merged. Closes #447.
+- **#369** (Topgrade plugin, @AdityaM-IITH) — check_installed returns bare bool, dryRun from args, atomic writes, protocol-compliant. Build passes. Merged. Closes #186.
 
 ### CHANGES_REQUESTED
 - **#374** (Cross-platform config, @ANSHIKATYAGI30) — Atomic write fix applied. 4 test assertions check `response["changed"]` on non-apply responses (check_installed, error). Asked to remove stale assertions.
 - **#429** (Yarn, @krishsharma-code) — dryRun from context, test import paths, success field. Author says "working on it."
-- **#369** (Topgrade, @AdityaM-IITH) — DIRTY merge state, protocol violations (check_installed wrapper, success/data fields, atomic writes).
 - **#470** (GitHub Desktop, @Stewartsson) — File paths at wrong directory level, plugin.yaml format incorrect. 6 behind main.
 - **#459** (Deno docs, @billu-beep) — README scope fixed (now +1 line only). Content is correct but 15 behind main — needs rebase before merge.
 - **#477** (Admin elevation check, @Randomlyclueless) — Duplicate `using` statement in AppRunner.cs (compilation error). 0 behind main.
@@ -127,12 +127,11 @@
 
 | # | Author | Title | State | Status |
 |---|--------|-------|-------|--------|
-| 477 | @Randomlyclueless | Admin elevation check (#390) | UNSTABLE | CHANGES_REQUESTED (duplicate using statement — compilation error) — 0 behind main |
-| 470 | @Stewartsson | GitHub Desktop plugin | UNSTABLE | CHANGES_REQUESTED (file paths, plugin.yaml format) — 6 behind main |
-| 459 | @billu-beep | Deno docs | UNKNOWN | CHANGES_REQUESTED resolved (content correct) — 15 behind main, needs rebase |
-| 429 | @krishsharma-code | Yarn plugin | UNSTABLE | CHANGES_REQUESTED (protocol) — 26 behind main |
-| 374 | @ANSHIKATYAGI30 | Cross-platform config | UNSTABLE | CHANGES_REQUESTED (test assertions) — 36 behind main |
-| 369 | @AdityaM-IITH | Topgrade plugin | UNKNOWN | CHANGES_REQUESTED (protocol) — 26 behind main |
+| 477 | @Randomlyclueless | Admin elevation check (#390) | UNSTABLE | CHANGES_REQUESTED (duplicate using statement — compilation error) — 2 behind main |
+| 470 | @Stewartsson | GitHub Desktop plugin | UNSTABLE | CHANGES_REQUESTED (file paths, plugin.yaml format) — 2 behind main |
+| 459 | @billu-beep | Deno docs | UNKNOWN | CHANGES_REQUESTED resolved (content correct) — 17 behind main, needs rebase |
+| 429 | @krishsharma-code | Yarn plugin | UNSTABLE | CHANGES_REQUESTED (protocol) — 28 behind main |
+| 374 | @ANSHIKATYAGI30 | Cross-platform config | UNSTABLE | CHANGES_REQUESTED (test assertions) — 38 behind main |
 
 ## Available Issues
 - **#467** (Plugin Docker Compose, level:beginner) — assigned to @amanyadav2107
@@ -145,7 +144,7 @@
 
 ## Key Contributors
 - @VIDYANKSHINI: 10+ merged PRs — most productive.
-- @Stewartsson: #361, #379, #384, #433, #423, #443, #464 merged. Has open PR #470 (GitHub Desktop, 6 behind main, CHANGES_REQUESTED).
+- @Stewartsson: #361, #379, #384, #433, #423, #443, #464 merged. Has open PR #470 (GitHub Desktop, 2 behind main, CHANGES_REQUESTED).
 - @Randomlyclueless: Open PR #477 (admin elevation fix, CHANGES_REQUESTED). Assigned #390.
 - @Bhagyashri77777: #357, #377, #417, #458 merged. No open assignments.
 - @sat-06: #387, #437, #461 merged. No open assignments.
@@ -156,6 +155,7 @@
 - @akshara200829-lgtm: #441 merged. No open assignments.
 - @lokeshkumar69: #338 merged. No open assignments.
 - @A-adilajaleel: #372 (VLC) merged. No open assignments.
+- @AdityaM-IITH: #369 (Topgrade) merged. No open assignments.
 - @Vishxlll20: #465, #472, #471 merged. All assignments completed. No open assignments.
 - @CH-GAGANRAJ: #460 merged. New contributor, completed #453.
 - @Aashita101: #456 merged. New contributor, completed #230.
